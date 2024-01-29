@@ -1,4 +1,2 @@
-
----
-myopenjdk8forubuntu= openjdk-8-jre
-myopenjdk8forredhat= java-1.8.0-openjdk
+myopenjdk8forubuntu: openjdk-8-jre
+myopenjdk8forredhat: java-1.8.0-openjdk
