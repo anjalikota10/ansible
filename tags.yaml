@@ -1,5 +1,5 @@
 ---
-- hosts: mywebserver
+- hosts: 172.31.33.252
   become: yes
   tasks: 
     - name: i want to install tree
