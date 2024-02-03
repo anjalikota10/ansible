@@ -10,7 +10,7 @@
       
       - name: i want to replace apache2 template with my jinja template
         template:
-           src: myindex.j2
+           src: index.j2
            dest: /var/www/html/index.html
         notify: restartwebserver
 
