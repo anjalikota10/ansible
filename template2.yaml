@@ -2,7 +2,7 @@
 - hosts: 172.31.34.198
   become: yes
   tasks: 
-      - name: i want to install nginx on ubuntu
+      - name: i want to install nginx on redhat
         yum:
           name: nginx
           state: present
