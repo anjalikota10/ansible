@@ -2,8 +2,8 @@
 - hosts: all
   become: yes
   tasks: 
-      - name: i want to install nginx on redhat
-        yum:
+      - name: i want to install nginx 
+        apt:
           name: nginx
           state: present
         
