@@ -1,5 +1,5 @@
 ---
-- hosts: 172.31.33.252
+- hosts: all
   become: yes
   tasks:
      - include_tasks: myfilehandle.yaml
@@ -8,6 +8,13 @@
        apt: 
          name: apache2
          state: present
+       when: ansible_os_family= "Debian"
+      
+     - name: i want to install httpd on redhat
+       apt: 
+         name: httpd
+         state: present
+       when: ansible_os_family= "RedHat"
 
      - name: i want to replace apache2 with my template
        template:
