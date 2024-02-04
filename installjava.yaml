@@ -4,12 +4,12 @@
   tasks:
       - name: i want to install Openjdk8 on ubuntu node
         apt:
-            name: "{{myopenjdk8forubuntu}}"
+            name: "{{myopenjdkforubuntu}}"
             state: present
         when: ansible_os_family == "Debian"
 
       - name: i want to install Openjdk8 on RedHat node
         yum:
-            name: "{{myopenjdk8forredhat}}"
+            name: "{{myopenjdkforredhat}}"
             state: present
         when: ansible_os_family == "RedHat"
