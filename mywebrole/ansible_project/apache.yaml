@@ -1,8 +1,0 @@
----
-- hosts: 172.31.9.14
-  become: yes
-  tasks:
-          - name: install apache
-            apt:
-                    name: apache
-                    state: present
