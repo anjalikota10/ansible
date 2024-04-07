@@ -1,0 +1,15 @@
+---
+- name: Deploy Static Website
+  hosts: all
+  become: yes
+  tasks:
+    - name: Sync website files from S3 to local directory
+      shell: aws s3 sync s3://mybucketaws199800 /tmp/website
+      args:
+        executable: /bin/bash
+
+    - name: Copy website files to web servers
+      synchronize:
+        src: /tmp/website/
+        dest: /var/www/html/
+      delegate_to: localhost
