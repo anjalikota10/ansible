@@ -1,5 +1,5 @@
 ---
-- hosts: 172.31.4.249
+- hosts: mywebserver
   become: yes
   tasks:
           - name: install nginx
