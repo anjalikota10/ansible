@@ -1,5 +1,5 @@
 ---
-- hosts: 172.31.42.223
+- hosts: 172.31.4.249
   become: yes
   tasks:
           - name: install nginx
