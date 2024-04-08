@@ -1,18 +1,12 @@
 ---
-- hosts: 172.31.4.249
-  become: yes
-  tasks:
-          - name: install nginx
-            apt:
-                    name: nginx
-                    state: present
+- name: Install Nginx
+  package:
+    name: nginx
+    state: present
 
+- name: Start Nginx service
+  service:
+    name: nginx
+    state: started
+    enabled: yes
 
----
-- hosts: 172.31.9.14
-  become: yes
-  tasks:
-          - name: install apache
-            apt:
-                    name: apache
-                    state: present

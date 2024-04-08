@@ -1,0 +1,8 @@
+- name: Copy website files from control machine to Linux hosts
+  hosts: web_servers
+  tasks:
+    - name: Copy index.html file to web servers
+      copy:
+        src: /usr/share/nginx/html/index.html  # Source file path on the control machine
+        dest: /usr/share/nginx/html/index.html  # Destination path on the target Linux hosts
+
