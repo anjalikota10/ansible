@@ -1,0 +1,19 @@
+---
+- name: Install and configure Nginx on Nginx node
+  hosts: nginx_servers
+  become: true
+  roles:
+    - mywebrole
+
+- name: Install and configure Apache on Apache node
+  hosts: apache_servers
+  become: true
+  roles:
+    - mywebrole2
+
+- name: Deploy static website on web servers
+  hosts: web_servers
+  become: true
+  roles:
+    - mywebrole3
+

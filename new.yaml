@@ -1,0 +1,9 @@
+---
+- hosts: web_servers
+  become: yes
+  tasks:
+    - name: Clone GitHub repository
+      git:
+        repo: https://github.com/anjalikota10/static-website.git
+        dest: /var/www/html
+        version: main
